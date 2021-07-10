@@ -1,0 +1,86 @@
+doctype html
+html(lang="en")
+  include components/head.pug
+  body 
+    include components/header.pug
+      +nav('about')
+      +slider
+    main.container.about
+      .row
+        .col-4.about__left 
+          .about__left-top 
+            .about__left-top-border.about__border
+            h4.about__block-title Education
+            ul.about__list 
+              li.about__list-item 
+                +cube 
+                .about__info-block 
+                  p.about__info 2007-2011
+                  p.about__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              li.about__list-item 
+                +cube 
+                .about__info-block 
+                  p.about__info 2007-2011
+                  p.about__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              li.about__list-item 
+                +cube 
+                .about__info-block 
+                  p.about__info 2007-2011
+                  p.about__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          .about__left-bottom
+            .about__left-bottom-border.about__border
+            ul.about__list 
+              each name in ['HTML','CSS','JAVASCRIPT','GULP','WORDPRESS']
+                li.about__list-item 
+                  +cube 
+                  p.about__info= name
+            h4.about__block-title.about__block-title_bottom Education
+        .col-4.about__center
+          h3.about__name Matt Steward
+          p.about__subtitle Web developer
+          .about__rect 
+            .about__rect-item 
+              .about__rect-side.about__rect-side_top
+                img.about__rect-img(src="images/avatar.webp", alt="")
+              .about__rect-side.about__rect-side_left
+              .about__rect-side.about__rect-side_right
+              .about__rect-side.about__rect-side_bottom
+              .about__rect-side.about__rect-side_front
+              .about__rect-side.about__rect-side_back
+          h3.about__title About Me
+          p.about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit donec enim pulvinar morbi mauris. Eget sed porttitor proin molestie rhoncus. Tristique vitae lorem vitae accumsan senectus vel. Nulla sed vitae, magna ut ut amet, sit vitae, nec. 
+        .col-4.about__right
+          .about__right-top 
+            .about__right-top-border.about__border
+            h4.about__block-title experience
+            ul.about__list 
+              li.about__list-item.about__list-item_reverse
+                +cube 
+                .about__info-block 
+                  p.about__info 2007-2011
+                  p.about__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              li.about__list-item.about__list-item_reverse
+                +cube 
+                .about__info-block 
+                  p.about__info 2007-2011
+                  p.about__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              li.about__list-item.about__list-item_reverse 
+                +cube 
+                .about__info-block 
+                  p.about__info 2007-2011
+                  p.about__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          .about__right-bottom
+            .about__right-bottom-border.about__border
+            ul.about__list 
+              li.about__list-item.about__list-item_reverse 
+                +cube 
+                a(href="#!").about__info (205) 555-0100
+              li.about__list-item.about__list-item_reverse 
+                +cube 
+                a(href="#!").about__info Matt Steward@gmail.com
+              li.about__list-item.about__list-item_reverse 
+                +cube 
+                a(href="#!").about__info 2715 Ash Dr. San Jose, South Dakota 83475
+            h4.about__block-title.about__block-title_bottom Contact
+          
+    include components/footer.pug

@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  include components/head.pug
+  body 
+    include components/header.pug
+      +nav('single work')
+      +slider
+    main.container.single 
+      .row 
+        .col-lg-4
+          img(src="images/Nike.webp", alt="Nike").single__image
+        .col-lg-8
+          h3.single__title Nike
+          p.single__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim egestas nulla pellentesque pretium. Pellentesque in rhoncus accumsan, suspendisse dolor quis mi, lacinia velit. Arcu enim, purus tempor proin. In congue sagittis suspendisse platea vivamus interdum. Quis tincidunt lobortis scelerisque arcu nibh. Nibh in tristique odio tellus est amet pharetra accumsan felis.
+          .single__categories 
+            div 
+              h4.single__info DATE:
+              time.single__time(datetime="2021-06-07T10:35:00+05:00") 20.01.2021
+            div 
+              h4.single__info CLIENT:
+              span.single__client Nike
+            div 
+              h4.single__info Skills:
+              ul.single__skills
+                li.single__skill 
+                  +cube 
+                  ="Photoshop"
+                li.single__skill 
+                  +cube 
+                  ="Photography"
+                li.single__skill 
+                  +cube 
+                  ="Branding"
+          a(href="").single__button VIEW PROJECT
+    include components/footer.pug

@@ -1,0 +1,93 @@
+doctype html
+html(lang="en")
+  include components/head.pug
+  body 
+    include components/header.pug
+      +nav('home')
+      +slider 
+      +tetris 
+    main.home
+      .skills
+        .container
+          svg(viewBox="0 0 695 621" fill="none" xmlns="http://www.w3.org/2000/svg").skills__shape
+            path(d="M324 373.763L342.109 362.453L359.871 372.731L341.532 383.952L324 373.763Z" fill="#4E5EFF" fill-opacity="0.25")
+            path(d="M0 310.65L345 106.845L694.5 309.845L345 511.845L0 310.65Z" fill="#4E5EFF" fill-opacity="0.25")
+            path(d="M144 303.924L343.073 188.701L540.434 306.776L343.073 422.569L144 303.924Z" fill="#4E5EFF" fill-opacity="0.35")
+            path(d="M209 272.88L341.5 195.38L474.5 272.88L341.5 350.88L209 272.88Z" fill="#4E5EFF")
+            path(d="M341.5 350.88L474.5 272.88V311.88L341.5 388.88V350.88Z" fill="#6472FF")
+            path(d="M209 272.88L341.5 350.88V388.88L209 309.38V272.88Z" fill="#313DB5")
+            path(d="M335.596 243.341L329.3 247.057V254.488V261.765V269.041L335.596 272.963L341.995 276.679V284.213L335.648 280.394L329.3 276.575V284.213L335.665 287.929L342.03 291.644L348.395 295.36L355 291.644V284.213L348.395 287.619V280.394L355 276.575V269.454L348.395 272.963L341.995 269.238L335.596 265.512V258.062L341.995 261.693L348.395 265.661L355 261.919V254.488L348.498 250.753L341.995 247.017L335.596 243.341Z" fill="#4E5EFF")
+            path(d="M355 254.488V261.919L348.395 265.661M355 254.488L348.395 258.062M355 254.488L348.498 250.753M329.3 247.057L335.596 243.341L341.995 247.017M329.3 247.057V254.488M329.3 247.057L335.648 250.669M329.3 254.488L335.596 258.062M329.3 254.488V261.765M348.395 265.661L341.995 261.693M348.395 265.661V258.062M335.596 272.963L329.3 269.041V261.765M335.596 272.963V265.512M335.596 272.963L341.995 276.679M335.596 258.062V265.512M335.596 258.062L341.995 261.693M335.596 258.062L335.648 250.669M348.395 272.963L355 269.454V276.575L348.395 280.394M348.395 272.963L341.995 269.238M348.395 272.963V280.394M335.596 265.512L329.3 261.765M335.596 265.512L341.995 269.238M348.395 280.394V287.619M348.395 280.394L341.995 276.679M348.395 287.619L355 284.213V291.644L348.395 295.36M348.395 287.619L341.995 284.213M348.395 287.619V295.36M341.995 276.679V284.213M341.995 276.679V269.238M341.995 284.213L342.03 291.644M341.995 284.213L335.648 280.394M348.395 295.36L342.03 291.644M342.03 291.644L335.665 287.929M335.648 280.394L329.3 276.575V284.213L335.665 287.929M335.648 280.394L335.665 287.929M341.995 261.693L342.03 254.488M348.395 258.062L342.03 254.488M342.03 254.488L335.648 250.669M342.03 254.488L348.498 250.753M335.648 250.669L341.995 247.017M341.995 247.017L348.498 250.753" stroke="black")
+            path(d="M355 269.351V261.919L348.395 265.635L341.995 261.713L335.596 258.101V265.507L341.995 269.247L348.395 272.963V280.404V287.619V295.36L355 291.644V284.213V276.575V269.351Z" fill="white")
+            path(d="M335.596 280.404L341.995 284.213V276.679L335.596 272.963L329.3 269.041V276.575L335.596 280.404Z" fill="white")
+            path(d="M355 261.919L354.755 261.484L355.5 261.064V261.919H355ZM341.995 269.247L341.744 269.68L341.743 269.679L341.995 269.247ZM341.995 261.713L342.241 261.278L342.249 261.282L342.257 261.287L341.995 261.713ZM335.596 258.101H335.096V257.244L335.842 257.665L335.596 258.101ZM335.596 265.507L335.344 265.938L335.096 265.794V265.507H335.596ZM335.596 280.404L335.341 280.834L335.337 280.832L335.596 280.404ZM341.995 284.213H342.495V285.092L341.74 284.643L341.995 284.213ZM341.995 276.679L342.246 276.246L342.495 276.391V276.679H341.995ZM329.3 269.041H328.8V268.14L329.565 268.617L329.3 269.041ZM329.3 276.575L329.041 277.003L328.8 276.856V276.575H329.3ZM355 291.644H355.5V291.937L355.245 292.08L355 291.644ZM348.395 295.36L348.64 295.796C348.485 295.883 348.295 295.881 348.142 295.791C347.989 295.702 347.895 295.537 347.895 295.36H348.395ZM355.5 261.919V269.351H354.5V261.919H355.5ZM355.24 269.789L348.634 273.402L348.155 272.524L354.76 268.912L355.24 269.789ZM347.895 272.963V265.635H348.895V272.963H347.895ZM348.149 265.199L354.755 261.484L355.245 262.355L348.64 266.071L348.149 265.199ZM348.143 273.395L341.744 269.68L342.246 268.815L348.646 272.531L348.143 273.395ZM341.495 269.247V261.713H342.495V269.247H341.495ZM342.257 261.287L348.656 265.209L348.133 266.061L341.734 262.139L342.257 261.287ZM341.75 262.148L335.351 258.536L335.842 257.665L342.241 261.278L341.75 262.148ZM336.096 258.101V265.507H335.096V258.101H336.096ZM335.849 265.075L342.248 268.816L341.743 269.679L335.344 265.938L335.849 265.075ZM355.5 276.575V284.213H354.5V276.575H355.5ZM355.229 284.657L348.624 288.063L348.165 287.175L354.771 283.769L355.229 284.657ZM347.895 287.619V280.404H348.895V287.619H347.895ZM348.144 279.972L354.749 276.143L355.251 277.008L348.645 280.837L348.144 279.972ZM335.852 279.975L342.251 283.783L341.74 284.643L335.341 280.834L335.852 279.975ZM341.495 284.213V276.679H342.495V284.213H341.495ZM341.744 277.111L335.345 273.395L335.847 272.531L342.246 276.246L341.744 277.111ZM335.332 273.387L329.036 269.465L329.565 268.617L335.861 272.539L335.332 273.387ZM329.8 269.041V276.575H328.8V269.041H329.8ZM329.56 276.148L335.856 279.977L335.337 280.832L329.041 277.003L329.56 276.148ZM355.5 269.351V276.575H354.5V269.351H355.5ZM347.895 280.404V272.963H348.895V280.404H347.895ZM355.5 284.213V291.644H354.5V284.213H355.5ZM355.245 292.08L348.64 295.796L348.149 294.924L354.755 291.208L355.245 292.08ZM347.895 295.36V287.619H348.895V295.36H347.895ZM336.096 272.963V276.684H335.096V272.963H336.096ZM336.096 276.684V280.404H335.096V276.684H336.096Z" fill="black")
+          .skills__catalog.row
+            .skills__line.col-9
+            .skills__line.skills__line_small.col-3
+            .col-xl-3.col-sm-6.col-12
+              .skills__item
+                h3.skills__title 
+                  +cube('#4E5EFF', 'white', '#6472FF')
+                  = 'Clean & Modern'
+                p.skills__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie nullam etiam est mauris elit sit consectetur. Ac vitae interdum lorem ac enim elementum pretium. Tortor eu dignissim dapibus lacinia ut nulla tristique. Risus cras arcu tellus mi massa mi id eu adipiscing.
+            .col-xl-3.col-sm-6.col-12
+              .skills__item
+                h3.skills__title 
+                  +cube('#4E5EFF', '#F79317', 'white')
+                  = 'Responsive'
+                p.skills__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie nullam etiam est mauris elit sit consectetur. 
+                p.skills__text Ac vitae interdum lorem ac enim elementum pretium. Tortor eu dignissim dapibus lacinia ut nulla tristique. Risus cras arcu tellus mi massa mi id eu adipiscing.
+            .col-xl-3.col-sm-6.col-12
+              .skills__item
+                h3.skills__title 
+                  +cube('#4E5EFF', '#4E5EFF', 'white')
+                  = 'HTML5 + CSS3'
+                p.skills__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                p.skills__text Molestie nullam etiam est mauris elit sit consectetur. Ac vitae interdum lorem ac enim elementum pretium. Tortor eu dignissim dapibus lacinia ut nulla tristique. 
+                p.skills__text Risus cras arcu tellus mi massa mi i.
+            .col-xl-3.col-sm-6.col-12
+              .skills__item
+                h3.skills__title 
+                  +cube('#FFF500', 'white', '#F79317')
+                  = 'Free of Charge'
+                p.skills__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie nullam etiam est mauris elit sit consectetur. Ac vitae interdum 
+                p.skills__text lorem ac enim elementum pretium. Tortor eu dignissim dapibus lacinia ut nulla tristique. Risus cras arcu tellus mi massa mi id eu adipiscing.
+      mixin rect(site,active = "", link, img)
+        div(class="rect__item "+active data-link=link data-image=img)
+          .rect__side.front
+            span.rect__title= site 
+          .rect__side.back
+            span.rect__title= site 
+          .rect__side.top
+          .rect__side.bottom
+          .rect__side.left
+            span.rect__title= site 
+          .rect__side.right
+            span.rect__title= site 
+      .works.container 
+        .works__content.row 
+          .col-1.works__left-side
+          .col-xl-5.col-lg-6.col-12
+            h2.works__title Some of our recent works
+            .works__left.col-lg-10
+              img(src="images/My-Work.webp" alt="My Work").works__image
+              a(href="#!").works__button LEARN MORE
+          .col-xl-5.col-lg-6.col-12.works__right
+            .rect
+              +rect('My Work','active', "#!", "images/My-Work.webp")
+              +rect('Nike', "", "#!", "images/nike.webp")
+              +rect('Vue Cinemas', "", "#!", "images/Vue Cinemas.webp")
+              +rect('Open Shop', "", "#!", "images/OpenShop.webp")
+              +rect('Street88', "", "#!", "images/Street88.webp")
+              +rect('Blue Marketing', "", "#!", "images/Blue marketing.webp")
+              +rect('The News Web', "", "#!", "images/TNW.webp")
+              +rect('Boulevard Market', "", "#!", "images/boulevard market.webp")
+            .rect__button next
+              svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M21.6162 14.1162L23.3837 15.8837L15 24.2675L6.61621 15.8837L8.38371 14.1162L13.75 19.4825L13.75 7.5L16.25 7.5L16.25 19.4825L21.6162 14.1162Z" fill="#4E5EFF")
+                rect(x="0.5" y="0.5" width="29" height="29" transform="matrix(-4.37114e-08 1 1 4.37114e-08 -2.18557e-08 2.18557e-08)" stroke="#4E5EFF")
+              
+
+              
+    include components/footer.pug
+

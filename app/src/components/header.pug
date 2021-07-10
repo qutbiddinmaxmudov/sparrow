@@ -1,0 +1,55 @@
+mixin link(active, adress, text)
+  if active === adress
+    li 
+      a(href="#!").header__link.current= text 
+  else if adress === 'home'
+    li 
+      a(href="/").header__link= text 
+  else 
+    li 
+      a(href="/"+adress+'.html').header__link= text 
+
+mixin nav(current)
+  nav.header__nav.container
+    a(href="")
+      img(src="images/Logo.webp", alt="Sparrow")
+    button.header__nav-toggler
+    ul.header__list
+      each item in [{adress: 'home', text: 'home'},{adress: 'portfolio', text: 'portfolio'},{adress: 'about', text: 'about me'},{adress: 'contact', text: 'contact'}]
+        +link(current, item.adress, item.text)
+        
+mixin slider 
+  .slider.container
+    .slider__inner 
+      .slider__item.active
+        h1.slider__title.slider__title_big make your product happen
+        a(href="#!").slider__button.slider__button_center LET`S GET STARTED
+      .slider__item.slider__item_with_image
+        .slider__content
+          h1.slider__title I help people and companies shine online
+          a(href="#!").slider__button LET`S GET STARTED
+        img(src="images/wars.webp", alt="Game").slider__image
+      .slider__item.slider__item_with_image
+        .slider__content
+          h1.slider__title hi, i`m Max, web developer
+          a(href="#!").slider__button LET`S GET STARTED
+        img(src="images/matt.webp", alt="Man").slider__image
+    button.slider__prev 
+      svg(width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M21.1783 11.1783L18.8217 8.82167L7.64333 20L18.8217 31.1783L21.1783 28.8217L14.0233 21.6667H30L30 18.3333H14.0233L21.1783 11.1783Z" fill="#4E5EFF")
+        rect(x="39.5" y="39.5" width="39" height="39" transform="rotate(-180 39.5 39.5)" stroke="#4E5EFF")
+    button.slider__next
+      svg(width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M18.8217 11.1783L21.1783 8.82167L32.3567 20L21.1783 31.1783L18.8217 28.8217L25.9767 21.6667H10V18.3333H25.9767L18.8217 11.1783Z" fill="#4E5EFF")
+        rect(x="0.5" y="-0.5" width="39" height="39" transform="matrix(1 0 0 -1 0 39)" stroke="#4E5EFF")
+mixin tetris 
+  img(src="images/tetris.webp", alt="tetris playground").tetris
+
+mixin cube(topColor='none',leftColor='none',rightColor='none')
+  svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg").cube
+    path(d="M29.2622 6.3936L15 0.492004L0.737793 6.3936L15 12.2952L29.2622 6.3936Z" fill=topColor).cube__top
+    path(d="M0.737793 6.39362V23.6066L15 29.5082V12.2952L0.737793 6.39362Z" fill=leftColor).cube__left
+    path(d="M15 12.2952V29.5082L29.2622 23.6066V6.39362L15 12.2952Z" fill=rightColor).cube__right
+    path(d="M29.7339 6.26036C29.73 6.2461 29.7236 6.23331 29.7181 6.22003C29.7073 6.192 29.6955 6.16495 29.6798 6.13938C29.6709 6.12511 29.6616 6.11233 29.6513 6.09905C29.6345 6.07643 29.6159 6.05577 29.5947 6.03659C29.5824 6.02479 29.5701 6.01397 29.5563 6.00364C29.5485 5.99774 29.5426 5.99036 29.5347 5.98495C29.5165 5.97266 29.4963 5.96577 29.4772 5.95594C29.4673 5.95102 29.46 5.94364 29.4496 5.93921L15.1874 0.0376226C15.0665 -0.0125409 14.9317 -0.0125409 14.8107 0.0376226L0.54855 5.93921C0.538223 5.94364 0.530354 5.95102 0.520518 5.95594C0.501338 5.96528 0.481666 5.97266 0.463961 5.98446C0.456092 5.98987 0.45019 5.99725 0.442322 6.00315C0.428551 6.01347 0.416748 6.02479 0.404453 6.0361C0.383798 6.05528 0.365109 6.07593 0.347896 6.09856C0.337568 6.11184 0.328224 6.12462 0.319372 6.13888C0.303634 6.16446 0.291831 6.19151 0.281012 6.21954C0.275602 6.23331 0.269208 6.2456 0.265274 6.25987C0.253963 6.30314 0.246094 6.3479 0.246094 6.39364V23.6066C0.246094 23.8058 0.366093 23.9853 0.549534 24.061L14.8117 29.9626C14.8181 29.9651 14.825 29.9641 14.8314 29.9666C14.886 29.9867 14.942 30 15.0001 30C15.0581 30 15.1142 29.9867 15.1688 29.9666C15.1752 29.9641 15.182 29.9651 15.1884 29.9626L29.4506 24.061C29.6341 23.9853 29.754 23.8058 29.754 23.6066V6.39364C29.754 6.3479 29.7462 6.30314 29.7339 6.26036ZM15.0001 1.02417L27.9762 6.39364L15.0001 11.7631L2.02395 6.39364L15.0001 1.02417ZM1.22969 7.12937L14.5083 12.6237V28.772L1.22969 23.2781V7.12937ZM28.7705 23.2781L15.4919 28.7725V12.6237L28.7705 7.12937V23.2781Z" fill="#122333").cube__border
+header.header 
+  

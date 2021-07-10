@@ -1,0 +1,85 @@
+doctype html
+html(lang="en")
+  include components/head.pug
+  body 
+    include components/header.pug
+      +nav('portfolio')
+      +slider
+    main.portfolio.container 
+      .row.portfolio__wrapper 
+        .portfolio__left.col-xl-8.col-md-9
+          .portfolio__post 
+            img(src="images/nike.webp", alt="nike").portfolio__img
+            .portfolio__content 
+              h3.portfolio__title Nike
+              p.portfolio__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi libero ut adipiscing tristique pretium aliquam.Morbi libero ut adipiscing tristique pretium aliquam. Morbi libero ut adipiscing tristique pretium aliquam. 
+              a(href="/single.html").portfolio__button LEARN MORE 
+          .portfolio__post 
+            img(src="images/nike.webp", alt="nike").portfolio__img
+            .portfolio__content 
+              h3.portfolio__title Nike
+              p.portfolio__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi libero ut adipiscing tristique pretium aliquam.Morbi libero ut adipiscing tristique pretium aliquam. Morbi libero ut adipiscing tristique pretium aliquam. 
+              a(href="/single.html").portfolio__button LEARN MORE 
+          .portfolio__post 
+            img(src="images/nike.webp", alt="nike").portfolio__img
+            .portfolio__content 
+              h3.portfolio__title Nike
+              p.portfolio__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi libero ut adipiscing tristique pretium aliquam.Morbi libero ut adipiscing tristique pretium aliquam. Morbi libero ut adipiscing tristique pretium aliquam. 
+              a(href="/single.html").portfolio__button LEARN MORE 
+        aside.portfolio__right.col-md-3
+          .widget
+            h4.widget__title Search
+            form(action="").widget__form
+              input(type="text" placeholder="Search Here...").widget__form-input
+              button(type="submit").widget__form-button
+                svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M11.4315 21.0487C16.479 21.0487 20.5845 16.9425 20.5845 11.895C20.5845 6.84675 16.4782 2.73975 11.4315 2.73975C6.38472 2.73975 2.27847 6.84675 2.27847 11.895C2.27847 16.9425 6.38472 21.0487 11.4315 21.0487ZM11.4315 3.39975C16.1152 3.39975 19.9252 7.21125 19.9252 11.8957C19.9252 16.5795 16.1152 20.3902 11.4315 20.3902C6.74772 20.3902 2.93772 16.5795 2.93772 11.8957C2.93772 7.21125 6.74772 3.39975 11.4315 3.39975Z" fill="#4E5EFF")
+                  path(d="M4.37321 12.2249C4.46073 12.2249 4.54467 12.1901 4.60655 12.1282C4.66844 12.0664 4.70321 11.9824 4.70321 11.8949C4.70321 8.18389 7.72196 5.16439 11.4322 5.16439C11.5197 5.16439 11.6037 5.12963 11.6656 5.06774C11.7274 5.00585 11.7622 4.92192 11.7622 4.83439C11.7622 4.74687 11.7274 4.66294 11.6656 4.60105C11.6037 4.53916 11.5197 4.50439 11.4322 4.50439C7.35821 4.50439 4.04396 7.81939 4.04396 11.8941C4.04376 11.9375 4.05213 11.9805 4.06859 12.0206C4.08505 12.0607 4.10927 12.0972 4.13986 12.1279C4.17045 12.1587 4.20682 12.183 4.24686 12.1997C4.28691 12.2163 4.32984 12.2249 4.37321 12.2249Z" fill="#4E5EFF")
+                  path(d="M27.3916 27.2596C27.4584 27.2594 27.5237 27.2389 27.5786 27.2009C27.6336 27.1628 27.6757 27.1089 27.6993 27.0464C27.723 26.9839 27.7271 26.9156 27.7111 26.8507C27.6951 26.7858 27.6598 26.7272 27.6098 26.6828L17.7728 18.0218C17.7067 17.9683 17.6225 17.9423 17.5376 17.9494C17.4528 17.9565 17.3741 17.996 17.3177 18.0598C17.2614 18.1236 17.2319 18.2067 17.2353 18.2917C17.2388 18.3767 17.275 18.4571 17.3363 18.5161L27.1741 27.1771C27.234 27.2303 27.3114 27.2597 27.3916 27.2596Z" fill="#4E5EFF")
+          .widget
+            h4.widget__title Categories
+            ul.widget__list
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="Desingns"
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="internet"
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="Other Stuff"
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="Photography"
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="Project"
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="Typography"
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="Web"
+              li
+                a(href="#!").widget__category
+                  +cube
+                  ="Web Development"
+          .widget
+            h4.widget__title Tags
+            div.widget__cloud
+              a(href="#!").widget__tag CSS
+              a(href="#!").widget__tag DRUPAL
+              a(href="#!").widget__tag gHOST
+              a(href="#!").widget__tag gULP
+              a(href="#!").widget__tag JOOMLA
+              a(href="#!").widget__tag PHP
+              a(href="#!").widget__tag JAVASCRIPT
+              a(href="#!").widget__tag wORDPRESS
+    include components/footer.pug

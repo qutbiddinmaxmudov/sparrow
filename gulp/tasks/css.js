@@ -13,7 +13,6 @@ module.exports = () =>
           .on('end', $.bs.reload)
       : $.gulp
           .src($.path.src.css)
-          .pipe($.gp.plumber())
           .pipe($.gp.sass())
           .pipe($.gp.groupCssMediaQueries())
           .pipe($.gp.autoprefixer())

@@ -2,6 +2,7 @@ global.$ = {
   gulp: require('gulp'),
   gp: require('gulp-load-plugins')(),
   bs: require('browser-sync').create(),
+  mode: process.argv.pop() !== 'build',
   path:{
     serverDir:'./app/dist',
     src:{
@@ -31,4 +32,13 @@ global.$ = {
 require('./gulp/config')
   .forEach(task=>require(task)())
   
-$.gulp.series($.gulp.parallel('html','css','script','img','font','server','watch'))()
+  if ($.mode) {
+    $.gulp.series($.gulp.parallel('html', 'css', 'script', 'img', 'font', 'server', 'watch'))()
+  } else {
+    $.gulp
+      .src($.path.serverDir, { read: false })
+      .pipe($.gp.clean({force:true}))
+      .pipe($.gulp.dest('./app'))
+      .on('end', $.gulp.parallel('html', 'css', 'script', 'img', 'font'))
+  }
+  
